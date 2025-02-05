@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./ContactUsStyle.css">
+        <link rel="shortcut icon" href="./img/favicon.ico">
+        <title>Contact Us</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+              <ul>
+                <li><a class="a" style="font-weight: bolder;" href="./Home.html">Home</a></li>
+                <li><a class="a" style="font-weight: bolder;" href="./ClubsHistory.html">Clubs</a></li>
+                <li><a class="a" style="font-weight: bolder;" href="./PersonalInformation.html">info</a></li>
+                <li><a class="a" style="font-weight: bolder;" href="./NationalTeam.html">National team</a></li>
+                <li><a class="a" style="font-weight: bolder;" href="./ContactWithTheWebsite.html">Contact us</a></li>
+              </ul>
+            </nav>
+        </header>
+        <main>
+            <h3 style="text-align: center;">Contact Us</h3>
+            <div class="container">
+                <form action="action_page.php">
+              
+                  <label class="titles" for="fname">First Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+              
+                  <label class="titles" for="lname">Last Name</label>
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                  <label class="titles" for="age">Age</label>
+                  <input type="text" id="age" name="age" placeholder="Your age..">
+
+                  <label class="titles" for="email">Email</label>
+                  <input type="text" id="email" name="email" placeholder="Your email..">
+              
+                  <label class="titles" for="country">Country</label>
+                  <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                    <option value="bulgaria">Bulgaria</option>
+                    <option value="spain">Spain</option>
+                    <option value="france">France</option>
+                    <option value="italy">Italy</option>
+                    <option value="portugal">Portugal</option>
+                  </select>
+
+                  <label class="titles" for="gender">Gender</label>
+                  <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+              
+                  <label class="titles" for="subject">Subject</label>
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                  
+                  
+                  <a id="button" href="./Home.html">Submit</a>
+              
+                </form>
+              </div>
+              
+        </main>
+    </body>
+    <footer>
+        <p>
+        for more information, click here:
+        <a href="https://en.wikipedia.org/wiki/Gerard_Piqu%C3%A9"> More info</a>
+        </p>
+    </footer>
+</html>
