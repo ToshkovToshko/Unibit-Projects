@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Plaza-de-toros-style.css">
+    <link rel="stylesheet" href="responsive.css">
+
+    <link rel="shortcut icon" href="./img/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+
+    <title>Plaza de toros de la Misericordia</title>
+</head>
+<body>
+    <header>
+        <section class="logo">
+            <h1 class="title-logo">Zaragoza</h1>
+        </section>
+        <nav>
+            <ul>
+                <li>
+                    <a href="Index.html">Home Page</a>
+                </li> 
+                <li>
+                    <a href="History.html">History</a>
+                </li>
+                <li>
+                    <a href="What-to-visit.html">What To Visit</a>
+                </li>
+                <li>
+                    <a href="Contact-us.html">Contact Us</a>
+                </li>
+                <p class="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </p>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Plaza de Toros de la Misericordia</h2>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="img/Plaza-de-toros/1.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="img/Plaza-de-toros/2.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="img/Plaza-de-toros/3.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Plaza-de-toros/4.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Plaza-de-toros/5.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Plaza-de-toros/6.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Plaza-de-toros/7.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Plaza-de-toros/8.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Plaza-de-toros/9.jpg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+        </div>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            }
+        </script>
+        <p class="general-information">
+            <br>
+            <br>
+            <br>
+            The first stable bullring of Zaragoza was built in the 18th century thanks to the initiative of Ramon Pignatelly, the name of Coso de la Misericordia (Arena of Mecy) referred to its link with the Royal House of Mercy, which was maintained partly thanks to the profits gained with the bull festivities. The first wooden arena was replaced with another brick and stone one in the 19th century. In 1916 the reform was made which gives it its current aspect, increasing the capacity of the bullring and equipping it with a porch and walk areas.
+            <br>
+            <br>
+            This is the first bullring in Spain that has a roof, fixed on the section's and mobile over the ring. This Teflon enclosure has permitted the diversification of the bullring functions, which now holds all kinds of events.
+            <br>
+            <br>
+            The Bullring of Zaragoza "Mercy" is one of the oldest Bullrings of Spain, was opened October 8th, 1764, its architectural style is neo-Mudéjar. In 1916 when it was important. In 1989 a last reform by installing a mobile Teflon covering was made.
+        </p>
+    </main>
+
+    <footer>
+        <section>
+            <h3 class="title">Zaragoza</h3>
+            <p class="description">
+                Good place to live, have fun and relax!
+            </p>
+        </section>
+        <section>
+            <nav>
+                <ul>
+                    <h3 class="title">Sitemap</h3>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="History.html">History</a></li>
+                    <li><a href="What-to-visit.html">What to visit </a></li>
+                    <li><a href="Contact-us.html">Contact us</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section id="contacts">
+            <ul>
+                <h3 class="title">Contacts</h3>
+                <li><i class="fas fa-map-marked"></i> calle Las Planas 66</li>
+                <li><i class="fas fa-phone-volume"></i> +34 597 666 345</li>
+                <li><i class="fas fa-envelope"></i> zaragoza@info.es</li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>

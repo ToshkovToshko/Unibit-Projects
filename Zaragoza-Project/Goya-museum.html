@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Goya-museum-style.css">
+    <link rel="stylesheet" href="responsive.css">
+
+    <link rel="shortcut icon" href="./img/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+
+    <title>Goya Museum</title>
+</head>
+<body>
+    <header>
+        <section class="logo">
+            <h1 class="title-logo">Zaragoza</h1>
+        </section>
+        <nav>
+            <ul>
+                <li>
+                    <a href="Index.html">Home Page</a>
+                </li> 
+                <li>
+                    <a href="History.html">History</a>
+                </li>
+                <li>
+                    <a href="What-to-visit.html">What To Visit</a>
+                </li>
+                <li>
+                    <a href="Contact-us.html">Contact Us</a>
+                </li>
+                <p class="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </p>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Goya Museum</h2>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="img/Goya-museum-pictures/1.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="img/Goya-museum-pictures/2.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="img/Goya-museum-pictures/3.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Goya-museum-pictures/4.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Goya-museum-pictures/5.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Goya-museum-pictures/6.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Goya-museum-pictures/7.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Goya-museum-pictures/8.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Goya-museum-pictures/9.jpg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+        </div>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            }
+        </script>
+        <p class="general-information">
+            <br>
+            <br>
+            <br>
+            The Goya Museum-Ibercaja Collection was opened in 1979 in the former house of Jerónimo Cósida – one of the most beautiful examples of Renaissance civil architecture in Zaragoza. The works on display in its permanent collection range from the 15th century to the 1970s. The first floor shows paintings and sculptures from the 15th to the 18th century. The second floor is completely dedicated to the great Aragonese painter: in the Goya Gallery Engravins gallery the complete series that Goya made from 1778 to 1825 are on display. The third floor shows Goyas legacy, works that reflect the impact of the painters work on Spanish and Aragonese artists of the 19th and 20th centuries. There are also guided tours, temporary exhibitions and an extensive program of cultural and educational activities. The building which houses the Goya Museum originally belonged to Jerónimo Cósida, a member of the lesser nobility. It was built between 1535 and 1536 by Morisco master house building Juan de Lanuza. Highlights include the square courtyard with banded columns crowned by lovely capitals. It is decorated with grotesques and plaster medallions on the sills, with a varied iconographic program related to the family of the Roman emperor Augustus.
+        </p>
+    </main>
+
+    <footer>
+        <section>
+            <h3 class="title">Zaragoza</h3>
+            <p class="description">
+                Good place to live, have fun and relax!
+            </p>
+        </section>
+        <section>
+            <nav>
+                <ul>
+                    <h3 class="title">Sitemap</h3>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="History.html">History</a></li>
+                    <li><a href="What-to-visit.html">What to visit </a></li>
+                    <li><a href="Contact-us.html">Contact us</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section id="contacts">
+            <ul>
+                <h3 class="title">Contacts</h3>
+                <li><i class="fas fa-map-marked"></i> calle Las Planas 66</li>
+                <li><i class="fas fa-phone-volume"></i> +34 597 666 345</li>
+                <li><i class="fas fa-envelope"></i> zaragoza@info.es</li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>

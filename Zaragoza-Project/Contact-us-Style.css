@@ -1,0 +1,145 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css);
+
+body{
+  background-image: url(./img/background3.png);
+  padding: 12px 120px 80px 120px;
+}
+
+/* ---------------HEADER--------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.5;
+    justify-content: center;
+    font-family: "Rubik Dirt", system-ui;
+    font-family: "Rye", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #8E8E8E;
+    padding-left: 50px;
+}
+
+nav {
+    background-color: #8E8E8E;
+    width: 100%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size:large;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    margin-left: 260px;
+    margin-top: 20px;
+}
+
+/* ---------------MAIN--------------- */
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px; 
+    border-radius: 4px;
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 20px; 
+    resize: vertical;
+    background-color: #8E8E8E;
+    color: #000000;
+}
+
+#button{
+    background-color: #ffffff;
+    color: #000000;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font: 20px Arial, Helvetika, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+}
+
+input[type=submit]:hover {
+    background-color: #000000;  
+}
+
+.container {
+    border-radius: 5px;
+    padding-left: 400px;
+    padding-right: 400px;
+    padding-top: 80px;
+    padding-bottom: 300px;
+    align-items: center;
+}
+
+.titles{
+    text-transform: uppercase;
+    font: 20px Arial, Helvetika, sans-serif;
+    text-align: justify;
+    color: #000000;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+#main-h3 {
+    margin-top: 70px;
+    text-transform: uppercase;
+    font: 23px Arial, Helvetika, sans-serif;
+    text-align: justify;
+    font-weight: bold;
+    color: #070706;
+}
+
+/* ---------------FOOTER--------------- */
+
+footer{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8E8E8E;
+    padding: 20px 50px 20px 50px;
+  }
+  footer section{
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: wrap;
+    width: 33.33%;
+  }
+  #contacts ul{
+    list-style: none;
+  }
+  #contacts ul li{
+    margin-top: 4px;
+  }
+  #contacts ul li i{
+    margin-right: 5px;
+  }
+  footer section .title{
+    font-weight: 400;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  footer section nav ul{
+    list-style: none;
+  }
+  footer section nav ul li{
+    margin-bottom: 5px;
+  }
+  footer section nav ul li a{
+    text-decoration: none;
+    color: black;
+  }

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="What-to-visit-style.css">
+    <link rel="stylesheet" href="responsive.css">
+
+    <link rel="shortcut icon" href="./img/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+
+    <title>What To Visit</title>
+</head>
+<body>
+    <header>
+        <section class="logo">
+            <h1 class="title-logo">Zaragoza</h1>
+        </section>
+        <nav>
+            <ul>
+                <li>
+                    <a href="Index.html">Home Page</a>
+                </li> 
+                <li>
+                    <a href="History.html">History</a>
+                </li>
+                <!-- <li>
+                    <a href="">What to visit</a>
+                </li> -->
+                <li>
+                    <a href="Contact-us.html">Contact Us</a>
+                </li>
+                <p class="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </p>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Places to visit in Zaragoza</h2>
+        <div>
+            <ul class="rolldown-list" id="myList">
+                <li>
+                    <a href="Cathedral.html">Cathedral - Basilica "Nuestra Señora del Pilar"</a>
+                </li> 
+                <li>
+                    <a href="Aljaferia.html">Aljaferia Palace</a>
+                </li>
+                <li>
+                    <a href="Parque-Grande.html">Parque Grande José Antonio Labordeta</a>
+                </li>
+                <li>
+                    <a href="Plaza-de-toros.html">Plaza de Toros de la Misericordia</a>
+                </li>
+                <li>
+                    <a href="Goya-museum.html">Goya Museum</a>
+                </li>
+                <li>
+                    <a href="Puente.html">Stone Bridge Zaragoza</a>
+                </li>
+                <li>
+                    <a href="Plaza-de-pilar.html">Plaza de Nuestra Señora del Pilar</a>
+                </li>
+                <li>
+                    <a href="Aquarium.html">Aquarium River of Zaragoza</a>
+                </li>
+            </ul>
+            <script>
+                $('.rolldown-list li').each(function () {
+                var delay = ($(this).index() / 4) + 's';
+                $(this).css({
+                    webkitAnimationDelay: delay,
+                    mozAnimationDelay: delay,
+                    animationDelay: delay
+                });
+                });
+    
+                $('#btnReload').click(function () {
+                $('#myList').removeClass('rolldown-list');
+                setTimeout(function () {
+                    $('#myList').addClass('rolldown-list');
+                }, 1);
+                });
+            </script>
+        </div>
+        <section>
+            <iframe width="960" height="515" src="https://www.youtube.com/embed/AmztyDYEWfY?si=9Bgh7RaSpzxypxBB" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <h3 class="title">Zaragoza</h3>
+            <p class="description">
+                Good place to live, have fun and relax!
+            </p>
+        </section>
+        <section>
+            <nav>
+                <ul>
+                    <h3 class="title">Sitemap</h3>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="History.html">History</a></li>
+                    <!-- <li><a href="">What to visit </a></li> -->
+                    <li><a href="Contact-us.html">Contact us</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section id="contacts">
+            <ul>
+                <h3 class="title">Contacts</h3>
+                <li><i class="fas fa-map-marked"></i> calle Las Planas 66</li>
+                <li><i class="fas fa-phone-volume"></i> +34 597 666 345</li>
+                <li><i class="fas fa-envelope"></i> zaragoza@info.es</li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Plaza-de-pilar-style.css">
+    <link rel="stylesheet" href="responsive.css">
+
+    <link rel="shortcut icon" href="./img/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+
+    <title>Plaza de Pilar</title>
+</head>
+<body>
+    <header>
+        <section class="logo">
+            <h1 class="title-logo">Zaragoza</h1>
+        </section>
+        <nav>
+            <ul>
+                <li>
+                    <a href="Index.html">Home Page</a>
+                </li> 
+                <li>
+                    <a href="History.html">History</a>
+                </li>
+                <li>
+                    <a href="What-to-visit.html">What To Visit</a>
+                </li>
+                <li>
+                    <a href="Contact-us.html">Contact Us</a>
+                </li>
+                <p class="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </p>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Plaza de Pilar</h2>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="img/Plaza-de-pilar-pictures/1.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="img/Plaza-de-pilar-pictures/2.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="img/Plaza-de-pilar-pictures/3.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Plaza-de-pilar-pictures/4.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Plaza-de-pilar-pictures/5.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Plaza-de-pilar-pictures/6.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Plaza-de-pilar-pictures/7.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Plaza-de-pilar-pictures/8.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Plaza-de-pilar-pictures/9.jpg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+        </div>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            }
+        </script>
+        <p class="general-information">
+            <br>
+            <br>
+            <br>
+            Located in the heart of the city’s historic center, this is where the forum of the original Roman city of Caesaraugusta once stood. Today, the so-called “plaza of cathedrals” is still the religious, political and social center of Zaragoza, preserving its original function from Roman times.
+            <br>
+            <br>
+            The rectangular plaza is the largest pedestrian plaza in Europe and is a Marian pilgrimage site and a gathering place for residents and visitors alike. Looking over the plaza is a sculptural monument dedicated to Francisco de Goya, the city’s most famous painter. The whole monument consists of a simple cylindrical cenotaph of the painter himself, with stone tablets alluding to both him and his daughter-in-law's family.
+            <br>
+            <br>
+            On the western side, you’ll find the Fountain of Hispanidad. This consists of a ramp with water flowing down it and a pond, which together, from above, take the shape of Latin America. A further three marble blocks represent Columbus’ ships.
+            <br>
+            <br>
+            As well as the Basilica del Pilar, there are other buildings which embellish and enhance this wonderful plaza. These include the Cathedral of El Salvador, La Seo which rises up on the eastern side of the plaza, The Lonja de Mercaderes, a Renaissance-style building built from brick with similar architecture to the palaces. The raised, carved-wood eaves are a particular highlight.
+            <br>
+            <br>
+            The town hall was built in the second half of the 20th century, in keeping with the style and materials of the rest of the buildings. The two sculptures on either side of the main entrance will particularly grab your attention. They’re the work of Aragonese sculptor Pablo Serrano and represent Saint Valerius (the city’s patron saint) and a guardian angel.
+            <br>
+            <br>
+            In the small square behind the Fountain of Hispanidad, you’ll find the church of San Juan de los Panetes, with its distinctive leaning tower. With the plaza’s overall sense of harmony and the slenderness of the buildings surrounding it, it’s no surprise that the square is known as “the living room of the city”.
+        </p>
+    </main>
+
+    <footer>
+        <section>
+            <h3 class="title">Zaragoza</h3>
+            <p class="description">
+                Good place to live, have fun and relax!
+            </p>
+        </section>
+        <section>
+            <nav>
+                <ul>
+                    <h3 class="title">Sitemap</h3>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="History.html">History</a></li>
+                    <li><a href="What-to-visit.html">What to visit </a></li>
+                    <li><a href="Contact-us.html">Contact us</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section id="contacts">
+            <ul>
+                <h3 class="title">Contacts</h3>
+                <li><i class="fas fa-map-marked"></i> calle Las Planas 66</li>
+                <li><i class="fas fa-phone-volume"></i> +34 597 666 345</li>
+                <li><i class="fas fa-envelope"></i> zaragoza@info.es</li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>

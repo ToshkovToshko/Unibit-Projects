@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Aljaferia-style.css">
+    <link rel="stylesheet" href="responsive.css">
+
+    <link rel="shortcut icon" href="./img/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+
+    <title>Aljaferia Palace</title>
+</head>
+<body>
+    <header>
+        <section class="logo">
+            <h1 class="title-logo">Zaragoza</h1>
+        </section>
+        <nav>
+            <ul>
+                <li>
+                    <a href="Index.html">Home Page</a>
+                </li> 
+                <li>
+                    <a href="History.html">History</a>
+                </li>
+                <li>
+                    <a href="What-to-visit.html">What To Visit</a>
+                </li>
+                <li>
+                    <a href="Contact-us.html">Contact Us</a>
+                </li>
+                <p class="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </p>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Aljaferia Palace</h2>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="img/Aljaferia-pictures/1.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="img/Aljaferia-pictures/2.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="img/Aljaferia-pictures/3.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Aljaferia-pictures/1.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Aljaferia-pictures/5.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Aljaferia-pictures/6.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Aljaferia-pictures/7.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Aljaferia-pictures/8.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Aljaferia-pictures/9.jpg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+        </div>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            }
+        </script>
+        <p class="general-information">
+            <br>
+            <br>
+            <br>
+            The palace of the Aljafería has been a fortified enclosure, Aragonese royal residence, headquarters and prison of the Inquisition, palace of the Catholic Monarchs, barracks and, since 1987, brand-new headquarters of the Courts of Aragon, our current Parliament.
+            <br>
+            <br>
+            It was built in the 11th century as a recreational palace for the Muslim kings who ruled then the Taifa of Sarakusta (Arabic for Zaragoza). Ten centuries later, that palace of joy that the Muslim monarch Al-Muqtadir dreamed of, is still, along with the Alhambra in Granada and the Mosque of Cordoba, one of the artistic jewels of the Muslim presence in Southern Europe.
+            <br>
+            <br>
+            UNESCO, in 2001, declared the Mudejar art of Aragon as a World Heritage Site, highlighting that the Aljafería Palace is one of the most representative monuments of the Mudejar, which has become the symbol of Aragonese civil architecture and, probably one of the main references of Spanish history and culture.
+            <br>
+            <br>
+            By accessing the monument, you will find the beautiful arches of the Islamic palace, which contrast with the overwhelming presence of the Trovador tower, as well as a tour around the medieval palace of the Kings of Aragon.
+            <br>
+            <br>
+            The Aljafería has been through all sorts of happenings, changes and stages. Many Aragonese people still remember its barracks status in the twentieth century, but today it is a lively and open building, a cultural reference, which shows its long history and welcomes within its walls the institution that represents Aragonese People: our Parliament ‘Las Cortes de Aragón’.
+        </p>
+    </main>
+
+    <footer>
+        <section>
+            <h3 class="title">Zaragoza</h3>
+            <p class="description">
+                Good place to live, have fun and relax!
+            </p>
+        </section>
+        <section>
+            <nav>
+                <ul>
+                    <h3 class="title">Sitemap</h3>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="History.html">History</a></li>
+                    <li><a href="What-to-visit.html">What to visit </a></li>
+                    <li><a href="Contact-us.html">Contact us</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section id="contacts">
+            <ul>
+                <h3 class="title">Contacts</h3>
+                <li><i class="fas fa-map-marked"></i> calle Las Planas 66</li>
+                <li><i class="fas fa-phone-volume"></i> +34 597 666 345</li>
+                <li><i class="fas fa-envelope"></i> zaragoza@info.es</li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>
