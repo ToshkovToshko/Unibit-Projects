@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Филми</title>
+    <link rel="stylesheet" href="AppStyle.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar"></nav>
+    </header>
+    <main id="main-content">
+        <section id="movies-list-view" class="view" style="display: block;">
+            <h2 id="all-movies">Всички филми</h2>
+            <div id="movies-container"></div>
+            <button id="add-movie-btn">Добави Филм</button>
+        </section>
+
+        <section id="login-view" class="view" style="display: none;">
+            <h2>Вход</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-username">Потребителско име:</label>
+                    <input type="text" id="login-username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Парола:</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <button type="submit">Влез</button>
+                <p id="login-error-message" style="color: red; display: none; margin-top: 10px;">Грешно потребителско име или парола.</p>
+            </form>
+        </section>
+
+        <section id="register-view" class="view" style="display: none;">
+            <h2>Регистрация</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-username">Потребителско име:</label>
+                    <input type="text" id="register-username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Имейл:</label>
+                    <input type="email" id="register-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Парола:</label>
+                    <input type="password" id="register-password" name="password" required>
+                </div>
+                <button type="submit">Регистрирай се</button>
+                <p id="register-success-message" style="color: green; display: none; margin-top: 10px;">Успешна регистрация! Моля, влезте в профила си.</p>
+            </form>   
+        </section>
+
+        <section id="add-movie-view" class="view" style="display: none;">
+            <h2>Добави Нов Филм</h2>
+            <form id="add-movie-form">
+                <div class="form-group">
+                    <label for="movie-name">Име на филма:</label>
+                    <input type="text" id="movie-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="movie-photo-url">URL адрес на снимка:</label>
+                    <input type="url" id="movie-photo-url" name="photoUrl" required>
+                </div>
+                <div class="form-group">
+                    <label for="movie-description">Описание:</label>
+                    <textarea id="movie-description" name="description" rows="5" required></textarea>
+                </div>
+                <button type="submit" id="add-movie-submit-btn">Добави</button>
+                <p id="add-movie-success-message" style="color: green; display: none; margin-top: 10px;">Филмът беше успешно добавен!</p>
+            </form>
+        </section>
+
+    </main>
+
+    <script src="App.js"></script>
+</body>
+</html>
